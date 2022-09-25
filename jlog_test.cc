@@ -14,8 +14,6 @@ int main(int argc, char **argv) {
     log.info({"favoriteFood", fmt::format("garbanzo {}", "beans")});
     log.debug(log.message("hello"));
 
-    log.debug(log.fmessage("hello {}", "world"));
-
     // for (int i = 0; i < 4; i++) {
     //     log.error(log.message("iteration {}", "a"));
     // }
