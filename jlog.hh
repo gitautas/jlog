@@ -35,7 +35,10 @@ public:
   void error(document object...);
   void fatal(document object...);
 
-  document message(std::string message); //TODO: Add formatting
+  template<typename F, typename... Args>
+  document message(F&& fmt, Args&&... args) {
+    return { "message", fmt::format(std::forward<F>(fmt), std::forward<Args>(args)...) };
+  }
 
 private:
   void log(std::string level, document object...);

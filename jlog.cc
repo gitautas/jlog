@@ -26,11 +26,16 @@ document Logger::timestamp() {
 void Logger::log(std::string level, document object...) {
   document j = {
       {"level", level},
-      object,
       timestamp(),
+      object,
   };
   *config.stream << j << std::endl;
 }
+
+
+void Logger::metrics(document object) {
+  log("info", object);
+};
 
 void Logger::trace(document object...) { log("trace", object); };
 void Logger::debug(document object...) { log("debug", object); };
@@ -38,9 +43,5 @@ void Logger::info(document object...) { log("info", object); };
 void Logger::warning(document object...) { log("warn", object); };
 void Logger::error(document object...) { log("error", object); };
 void Logger::fatal(document object...) { log("fatal", object); };
-
-document Logger::message(std::string message) {
-  return {"message", message};
-};
 
 } // namespace jlog
