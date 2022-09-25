@@ -1,0 +1,6 @@
+.DS_Store
+.idea
+*.log
+tmp/
+compiler_commands.json
+.cache

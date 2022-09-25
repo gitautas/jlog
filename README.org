@@ -1,0 +1,11 @@
+#+title: jlog
+* Build
+#+begin_src shell
+git clone https://github.com/gitautas/jlog.git
+cd jlog
+meson setup build
+meson compile -C build
+#+end_src
+
+* How
+look at [[./jlog_test.cc][the test]].
