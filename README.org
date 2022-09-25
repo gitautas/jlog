@@ -1,5 +1,6 @@
 #+title: jlog
 * Build
+install nlohmann_json and fmt
 #+begin_src shell
 git clone https://github.com/gitautas/jlog.git
 cd jlog
