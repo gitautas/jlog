@@ -12,14 +12,14 @@ deps = [
   fmt,
 ]
 
-shlib = shared_library('jlog', 'jlog.cc',
+shlib = shared_library('jlog', 'jlog.cpp',
   install : true,
   cpp_args : lib_args,
   gnu_symbol_visibility : 'default',
   dependencies : deps,
 )
 
-test_exe = executable('jlog_test', 'jlog_test.cc',
+test_exe = executable('jlog_test', 'jlog_test.cpp',
   dependencies : deps,
   link_with : shlib)
 
@@ -32,7 +32,7 @@ jlog_dep = declare_dependency(
 
 # Make this library usable from the system's
 # package manager.
-install_headers('jlog.hh', subdir : 'jlog')
+install_headers('jlog.hpp', subdir : 'jlog')
 
 pkg_mod = import('pkgconfig')
 pkg_mod.generate(

@@ -1,6 +1,6 @@
 #include <ctime>
 #include <iostream>
-#include <jlog.hh>
+#include <jlog.hpp>
 #include <nlohmann/json.hpp>
 #include <ostream>
 #include <utility>

@@ -1,6 +1,6 @@
 #include <fmt/core.h>
 #include <iostream>
-#include <jlog.hh>
+#include <jlog.hpp>
 #include <string>
 
 jlog::document generateMetrics() {
